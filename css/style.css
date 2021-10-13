@@ -416,6 +416,8 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  color: var(--svg-bgn);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -425,7 +427,7 @@ body {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--svg-bgn);
+  fill: currentColor;
 }
 
 .social-link:hover,
@@ -451,6 +453,8 @@ body {
 .card-content-team {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .team-subtitle {
@@ -515,7 +519,8 @@ body {
 
   align-items: center;
   justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   width: 106px;
@@ -601,6 +606,9 @@ body {
   cursor: pointer;
   background: var(--secondary-background);
   color: var(--secondary-title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-top-wrapper {
@@ -822,11 +830,22 @@ body {
   box-shadow: var(--card-portfolio-shadow);
 }
 
+.modal-icon {
+  width: 18px;
+  height: 18px;
+}
+
 .close-btn {
+  display: flex;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
   background-color: transparent;
-  border: none;
   cursor: pointer;
 }
